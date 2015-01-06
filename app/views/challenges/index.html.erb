@@ -1,0 +1,27 @@
+<div class="well">
+  <h2>Created Challenges</h2>
+  <div class="pure-g">
+    <% @created.each do |challenge| %>
+    <%= render challenge %>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="well">
+  <h2>Accepted Challenges</h2>
+  <div class="pure-g">
+    <% @accepted.each do |challenge| %>
+    <%= render challenge %>
+    <% end %>
+  </div>
+</div>
+
+<div class="well">
+  <h2>Open Challenges</h2>
+  <div class='pure-g'>
+    <% @challenges.each do |challenge| %>
+    <%= render challenge %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<fieldset>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :starts_at %>
+  <%= f.input :ends_at %>
+</fieldset>
+
+<fieldset>
+  <legend>Tasks</legend>
+  <%= f.simple_fields_for :tasks do |task| %>
+    <%= render 'task_fields', f: task %>
+  <% end %>
+  <div class="links">
+    <%= link_to_add_association 'add task', f, :tasks %>
+  </div>
+</fieldset>
+
+<div class="pure-controls">
+  <%= f.button :submit, 'Submit', class: 'pure-button pure-button-primary' %>
+</div>

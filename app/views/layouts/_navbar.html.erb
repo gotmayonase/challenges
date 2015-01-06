@@ -1,0 +1,15 @@
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="/">Challenges</a>
+
+    <ul>
+      <li class="pure-menu-selected"><a href="/">Home</a></li>
+      <% if current_user %>
+      <li><%= link_to 'Create a Challenge', new_challenge_path %></li>
+      <li><a href="#">Profile</a></li>
+      <% else %>
+      <li><a href="<%= new_user_session_path %>">Sign In or Sign Up</a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

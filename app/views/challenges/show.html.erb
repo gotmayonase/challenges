@@ -1,0 +1,8 @@
+<h1><%= @challenge.name %></h1>
+<span><%= @challenge.starts_at %> - <%= @challenge.ends_at %></span>
+<p><%= @challenge.description %></p>
+<ul>
+  <% @challenge.tasks.each do |task| %>
+  <li><%= task.name %></li>
+  <% end %>
+</ul>
